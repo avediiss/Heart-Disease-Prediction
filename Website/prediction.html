@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HeartDiseasePrediction</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Header-Dark.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#"></a><button data-bs-toggle="collapse"
+                class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i
+                    class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item nav-link"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link active" href="prediction.html">Prediction</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="contact.html">contact</a></li>
+                </ul>
+            </div>
+            <header></header>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image:url('assets/img/intro-bg.jpg');">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading">Heart Disease</h1>
+                        <p class="intro-text"><strong>Predict&nbsp;</strong></p><a class="btn btn-link btn-circle"
+                            role="button" href="#download"><i class="fa fa-angle-double-down animated"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="text-center download-section content-section" id="download"
+        style="background-image:url('assets/img/downloads-bg.jpg');">
+        <div class="container">
+
+            <br>
+            <form action="predict" method="POST" class="row">
+                <div class="col-md-4">
+                    <label class="form-label">Enter age:</label>
+                    <input type="number" name="age" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Select sex:</label>
+                    <select name="sex" class="form-control" required>
+                        <option value=1>Male</option>
+                        <option value=0>Female</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Select Chest Pain type:</label>
+                    <select name="cp" class="form-control" required>
+                        <option value=0>0</option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Enter Resting Blood Pressure (in mm Hg):</label>
+                    <input type="number" name="trestbps" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Enter serum Cholestrol (in mg/dl):</label>
+                    <input type="number" name="chol" class="form-control" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Select Resting ECG Level:</label>
+                    <select name="restecg" class="form-control" required>
+                        <option value=0>0</option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Enter maximum heart rate acheived:</label>
+                    <input type="number" name="thalach" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Enter ST depression induced by exercise relative to rest:</label>
+                    <input type="number" step="any" name="oldpeak" class="form-control" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Select number of major vessels colored by flourosopy:</label>
+                    <select name="ca" class="form-control" required>
+                        <option value=0>0</option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Select thal:</label>
+                    <select name="thal" class="form-control" required>
+                        <option value=3>normal</option>
+                        <option value=6>fixed defect</option>
+                        <option value=7>reversable defect</option>
+                    </select>
+                </div>
+                <br>
+                <p class="text-info">*All fields are mandatory</p>
+                <div class="text-center">
+                    <input type="submit" value="Submit" class="btn btn-primary"> 
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+</body>
+
+</html>
